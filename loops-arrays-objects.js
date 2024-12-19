@@ -16,8 +16,10 @@ const scores = [
 // 66
 // ==========================================
 
-
-
+console.log("Opdracht 1a");
+for (let i = 0; i < scores.length; i++) {
+    console.log(scores[i].score);
+}
 
 
 // ==========================================
@@ -32,6 +34,17 @@ const scores = [
 // D
 // ==========================================
 
+console.log("Opdracht 1b");
+for (let i = 0; i < scores.length; i++) {
+    switch (true){
+        case (scores[i].score < 60): console.log("F"); break;
+        case (scores[i].score < 70): console.log("D"); break;
+        case (scores[i].score < 80): console.log("C"); break;
+        case (scores[i].score < 90): console.log("B"); break;
+        case (scores[i].score < 100): console.log("A"); break;
+        default: console.log("unknown score");
+    }
+}
 
 
 
@@ -49,7 +62,24 @@ const scores = [
 //  ];
 // ==========================================
 
-
+console.log("Opdracht 1c");
+console.log("Voor het script");
+//this works in the terminal
+// but in the console of the webbrowser the loop will be faster than this console.log()
+// and the "before" array will be adjusted already and therefore show the "after" array already
+console.log(scores);
+for (let i = 0; i < scores.length; i++) {
+    switch (true){
+        case (scores[i].score < 60): scores[i].grade="F"; break;
+        case (scores[i].score < 70): scores[i].grade="D"; break;
+        case (scores[i].score < 80): scores[i].grade="C"; break;
+        case (scores[i].score < 90): scores[i].grade="B"; break;
+        case (scores[i].score < 100): scores[i].grade="A"; break;
+        default: scores[i].grade="unknown grade";
+    }
+}
+console.log("Na het script");
+console.log(scores);
 
 
 
