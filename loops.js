@@ -36,6 +36,7 @@ for (let i = 0; i < 5; i++) { //this is a version with if..else which i think is
 */
 
 //the code in comment above is what is being asked, but this is a better version with the same result
+//when the loop is  over a lot of items, then you don't want to have an unnecessary if..else to slow things down
 for (let i = 0; i < 4; i++) {
     console.log("loop...");
 }
